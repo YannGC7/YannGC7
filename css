@@ -1,0 +1,85 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #2e2e2e;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #f7c41d;
+}
+
+/* Estilo de secciones */
+.seccion {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.titulo-parpadeante {
+    font-size: 3em;
+    color: #ff6f61;
+    animation: parpadeo 1s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Estilo de la galería */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.imagenes img {
+    width: 250px;
+    height: auto;
+    border: 3px solid #ff6f61;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .imagenes img {
+        width: 100%;
+    }
+}
